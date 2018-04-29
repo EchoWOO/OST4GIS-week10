@@ -7,14 +7,14 @@ body {
 .map {
     position: absolute;
     right: 0px;
-    left: 340px;
+    left: 540px;
     height: 100%;
     top: 0;
 }
 
 .sidebar {
-    position: absolute;
-    left: 0px;
+    position: relative;
+    left: 200px;
     width: 340px;
     top: 0;
     bottom: 0;
@@ -23,9 +23,13 @@ body {
     padding-bottom: 60px;
 }
 
+.item:hover {
+     background-color: #eee;
+ }
+
 .item {
+    margin-top:20px;
     padding: 10px;
-    background-color: #eee;
 }
 
 .item:not(:last-child) {
@@ -41,7 +45,7 @@ body {
 .sort {
     position: fixed;
     bottom: 0;
-    left: 0;
+    left: 200px;
     width: 340px;
     background-color: #fff;
     padding: 20px;
@@ -60,8 +64,69 @@ body {
     border-radius: 0;
     background-color: #fff;
     border-bottom: 1px solid #eee;
-    margin: -14px -20px 20px;
+    margin: -14px -30px 20px;
     padding: 10px 20px 15px;
+}
+
+.container{
+ position: absolute;
+ left: 0px;
+ width: 200px;
+ top: 0;
+ bottom: 0;
+ overflow-y: auto;
+ padding: 15px;
+ padding-bottom: 0px;
+ background-color: #273440;
+}
+
+.glyphicon.glyphicon-shopping-cart {
+   font-size: 50px;
+   color: white;
+   line-height: 1.5;
+ }
+
+.topright-button{
+   position: absolute;
+   right: 0px;
+ ｝
+
+a {
+   color: red;
+}
+
+.w-100{
+  border-top: 0.5px solid grey;
+  padding: 10px;
+  vertical-align: middle;
+  margin-top: 10px;
+}
+
+.btn{
+ display: inline-block;
+ float: right;
+}
+
+.btn-group{
+ display: inline-block;
+ float: right;
+}
+
+#myModal > div > div > div.modal-body > div.container-fluid > div.row{
+ border-bottom:  0.5px solid grey;
+ padding:5px;
+
+ #myModal > div > div > div.modal-body > div.container-fluid > div.row > div.col-md-12{
+   font-weight: bold;
+   font-size: 20px;
+   left: -20px;
+ }
+
+.navbar-header{
+   color: black;
+   font-weight: bold;
+   margin-left: -14px;
+   font-size: 18px;
 }
 
 .navbar-brand {
@@ -69,18 +134,28 @@ body {
     font-weight: bold;
 }
 
+.dropdown{
+  position: relative;
+  right: 200px;
+}
+
 /* =============
 Media Queries
 ============= */
 
 @media screen and (min-width: 480px) and (max-width: 800px) {
-    /*.item {
-        background-color: blue;
-    }*/
+  .sidebar {
+         width:50%;
+         }
+       .map {
+         left:270px;
+       }
 }
 
 @media screen and (max-width: 479px) {
-    /*.item {
-        background-color: red;
-    }*/
+  .sidebar {
+       display: none;
+       }
+  .map {
+       left:0px;
 }
